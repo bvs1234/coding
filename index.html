@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Bullet Points</title>
+    <title>Notebook Style</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
+            font-family: 'Patrick Hand', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .notebook {
+            background: linear-gradient(to bottom, #ffffff 10%, #eef4ff 10%, #eef4ff 11%, #ffffff 11%);
+            background-size: 100% 40px;
+            width: 80%;
+            max-width: 800px;
+            padding: 30px 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .notebook:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 2px;
+            height: 100%;
+            background-color: #ff4d4d;
         }
 
         .bullet-container {
@@ -42,16 +71,26 @@
             font-weight: bold;
             color: #3f51b5;
         }
+
+        code {
+            background-color: #eef4ff;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d6336c;
+        }
     </style>
 </head>
 <body>
-    <ul class="bullet-container">
-        <li class="bullet-item">
-            <span class="highlight">ALWAYS</span> make a separate project folder for each project with the help of a <code>.bat</code> file.
-        </li>
-        <li class="bullet-item">
-            Make a directory structure saved in a file in that folder.
-        </li>
-    </ul>
+    <div class="notebook">
+        <ul class="bullet-container">
+            <li class="bullet-item">
+                <span class="highlight">ALWAYS</span> make a separate project folder for each project with the help of a <code>.bat</code> file.
+            </li>
+            <li class="bullet-item">
+                Make a directory structure saved in a file in that folder.
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
