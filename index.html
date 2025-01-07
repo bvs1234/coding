@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Bullet Points</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+
+        .bullet-container {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .bullet-item {
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .bullet-item:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .bullet-item:nth-child(2) {
+            animation-delay: 1.0s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #3f51b5;
+        }
+    </style>
+</head>
+<body>
+    <ul class="bullet-container">
+        <li class="bullet-item">
+            <span class="highlight">ALWAYS</span> make a separate project folder for each project with the help of a <code>.bat</code> file.
+        </li>
+        <li class="bullet-item">
+            Make a directory structure saved in a file in that folder.
+        </li>
+    </ul>
+</body>
+</html>
